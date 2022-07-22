@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		E983D92F288AA97000C72B4C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E983D92E288AA97000C72B4C /* AppDelegate.m */; };
 		E983D932288AA97000C72B4C /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E983D931288AA97000C72B4C /* SceneDelegate.m */; };
-		E983D935288AA97000C72B4C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E983D934288AA97000C72B4C /* ViewController.m */; };
+		E983D935288AA97000C72B4C /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = E983D934288AA97000C72B4C /* ViewController.mm */; };
 		E983D938288AA97000C72B4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E983D936288AA97000C72B4C /* Main.storyboard */; };
 		E983D93A288AA97100C72B4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E983D939288AA97100C72B4C /* Assets.xcassets */; };
 		E983D93D288AA97100C72B4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E983D93B288AA97100C72B4C /* LaunchScreen.storyboard */; };
@@ -17,6 +17,7 @@
 		E983D94A288AA97100C72B4C /* CBenchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E983D949288AA97100C72B4C /* CBenchTests.m */; };
 		E983D954288AA97100C72B4C /* CBenchUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E983D953288AA97100C72B4C /* CBenchUITests.m */; };
 		E983D956288AA97100C72B4C /* CBenchUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E983D955288AA97100C72B4C /* CBenchUITestsLaunchTests.m */; };
+		E983D964288AA99600C72B4C /* Task.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E983D962288AA99600C72B4C /* Task.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +44,7 @@
 		E983D930288AA97000C72B4C /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		E983D931288AA97000C72B4C /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		E983D933288AA97000C72B4C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E983D934288AA97000C72B4C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E983D934288AA97000C72B4C /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
 		E983D937288AA97000C72B4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E983D939288AA97100C72B4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E983D93C288AA97100C72B4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,6 +55,8 @@
 		E983D94F288AA97100C72B4C /* CBenchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CBenchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E983D953288AA97100C72B4C /* CBenchUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBenchUITests.m; sourceTree = "<group>"; };
 		E983D955288AA97100C72B4C /* CBenchUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBenchUITestsLaunchTests.m; sourceTree = "<group>"; };
+		E983D962288AA99600C72B4C /* Task.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Task.cpp; sourceTree = "<group>"; };
+		E983D963288AA99600C72B4C /* Task.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Task.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,12 +112,14 @@
 				E983D930288AA97000C72B4C /* SceneDelegate.h */,
 				E983D931288AA97000C72B4C /* SceneDelegate.m */,
 				E983D933288AA97000C72B4C /* ViewController.h */,
-				E983D934288AA97000C72B4C /* ViewController.m */,
+				E983D934288AA97000C72B4C /* ViewController.mm */,
 				E983D936288AA97000C72B4C /* Main.storyboard */,
 				E983D939288AA97100C72B4C /* Assets.xcassets */,
 				E983D93B288AA97100C72B4C /* LaunchScreen.storyboard */,
 				E983D93E288AA97100C72B4C /* Info.plist */,
 				E983D93F288AA97100C72B4C /* main.m */,
+				E983D962288AA99600C72B4C /* Task.cpp */,
+				E983D963288AA99600C72B4C /* Task.hpp */,
 			);
 			path = CBench;
 			sourceTree = "<group>";
@@ -266,10 +271,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E983D935288AA97000C72B4C /* ViewController.m in Sources */,
+				E983D935288AA97000C72B4C /* ViewController.mm in Sources */,
 				E983D92F288AA97000C72B4C /* AppDelegate.m in Sources */,
 				E983D940288AA97100C72B4C /* main.m in Sources */,
 				E983D932288AA97000C72B4C /* SceneDelegate.m in Sources */,
+				E983D964288AA99600C72B4C /* Task.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
